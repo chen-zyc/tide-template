@@ -1,0 +1,14 @@
+
+### 日志。
+RUST_LOG='info,tide::log::middleware=error'
+#LOG_PATH=/data/logs/tide-template.log
+LOG_PATH=stdout
+MAX_LOG_FILES=5
+LOG_WITH_COLOR=true
+
+### Web
+SERVER_NAME=SERVER-TEMPLATE
+SERVER_ADDRESS=127.0.0.1:7777
+# 时间, 状态码, 远端地址, 请求第一行, 响应的字节, 耗时时间, 请求头, 响应头
+ACCESS_LOG_FORMAT='REQUEST: %t    %s    %a    "%r"    %bB    %Dms    %{ALL_REQ_HEADERS}xi    %{ALL_RES_HEADERS}xo'
+REQUEST_ID_HEADER=x-request-id

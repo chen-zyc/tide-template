@@ -1,0 +1,25 @@
+[package]
+name = "tide-template"
+version = "0.1.0"
+edition = "2018"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+# web
+tide = "0.16"
+futures = "0.3"
+async-std = {version = "1.10", features = ["attributes"]}
+uuid = {version = "0.8", features = ["v4"]}
+tide-tracing-middleware = "0.1"
+
+# 配置
+dotenv = "0.15"
+
+# 日志
+log = "0.4"
+tracing = "0.1"
+tracing-subscriber = "0.2.0"
+tracing-futures = "0.2"
+tracing-appender = "0.1"
+rolling-file = "0.1"
